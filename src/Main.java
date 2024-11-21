@@ -12,7 +12,7 @@ public class Main {
             return; // se termina el programa si no hay conexion
         }
 
-        // Vetana Login
+        // Vetana de Login
         SwingUtilities.invokeLater(() -> new VentanaLogin().setVisible(true));
     }
 }

@@ -67,7 +67,7 @@ public class VentanaPrincipal extends JFrame {
                     statement.executeUpdate();
 
                     JOptionPane.showMessageDialog(this, "Usuario eliminado correctamente.");
-                    cargarUsuarios(); // Refresca la tabla después de eliminar
+                    cargarUsuarios(); // Refresca la tabla despues de eliminar
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(this, "Error al eliminar el usuario: " + ex.getMessage());
                 }

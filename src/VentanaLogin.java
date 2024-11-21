@@ -37,7 +37,7 @@ public class VentanaLogin extends JFrame {
         btnRegistrar.setBounds(120, 80, 100, 25);
         add(btnRegistrar);
 
-        // Acción al presionar "Registrar"
+        // Boton Registrar
         btnRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,7 +46,7 @@ public class VentanaLogin extends JFrame {
             }
         });
 
-        // Acción al presionar "Entrar"
+
         btnEntrar.addActionListener(e -> {
             String usuario = txtUsuario.getText();
             String contrasena = new String(txtContrasena.getPassword());

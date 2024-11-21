@@ -110,7 +110,29 @@ public class VentanaRegistro extends JFrame {
             JOptionPane.showMessageDialog(this, "El campo Nombre es obligatorio.");
             return;
         }
-            // Repite esto para los demás campos
+
+        if (apellido.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo Apellido es obligatorio.");
+            return;
+        }
+
+        if (telefono.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo Telefono es obligatorio.");
+            return;
+        }
+        if (correo.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo Correo es obligatorio.");
+            return;
+        }
+        if (password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo Contrasena es obligatorio.");
+            return;
+        }
+        if (confirmPassword.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo Confirmar Contrasena es obligatorio.");
+            return;
+        }
+
 
 
         try (Connection connection = BaseDatos.getInstancia().getConexion()) {

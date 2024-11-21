@@ -9,7 +9,7 @@ public class BaseDatos {
 
     private BaseDatos() {
         try {
-            conexion = DriverManager.getConnection(
+            conexion = DriverManager.getConnection( // Linea para inicializar conexion con el user y passwords definidos
                     "jdbc:mysql://localhost:3306/usuarios_db", "root", "root");
         } catch (Exception e) {
             e.printStackTrace();
@@ -25,7 +25,7 @@ public class BaseDatos {
 
     public Connection getConexion() {
         try {
-            if (conexion == null || conexion.isClosed()) { // Verifica si la conexión está cerrada
+            if (conexion == null || conexion.isClosed()) { // Verifica si la conexion se cerro
                 conexion = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/usuarios_db", "root", "root");
                 System.out.println("Conexión activa: " + !conexion.isClosed());
@@ -40,7 +40,7 @@ public class BaseDatos {
 
     public boolean validarLogin(String usuario, String contrasena) {
         String query = "SELECT * FROM usuarios WHERE nombre_usuario = ? AND contrasena = ?";
-        try (Connection conexion = getConexion(); // Abre una nueva conexión para esta operación
+        try (Connection conexion = getConexion(); // Abre una nueva conexion para la operacion
              PreparedStatement statement = conexion.prepareStatement(query)) {
 
             statement.setString(1, usuario);
